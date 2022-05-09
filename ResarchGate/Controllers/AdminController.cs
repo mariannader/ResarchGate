@@ -72,7 +72,7 @@ namespace ResarchGate.Controllers
             {
 
                 Session["u_id"] = ad.u_id.ToString();
-                return RedirectToAction("profile");
+                return RedirectToAction("Index" , "tbl_paper" ,new { currentUser = ad.u_name });
 
             }
             else
@@ -81,12 +81,6 @@ namespace ResarchGate.Controllers
 
             }
 
-            return View();
-        }
-
-
-        public ActionResult profile()
-        {
             return View();
         }
 
